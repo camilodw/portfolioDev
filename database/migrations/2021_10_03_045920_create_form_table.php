@@ -18,7 +18,7 @@ class CreateFormTable extends Migration
             $table->String('email');
             $table->String('name');
             $table->String('lastName');
-            $table->String('affair');
+            $table->longText('message');
         });
     }
 

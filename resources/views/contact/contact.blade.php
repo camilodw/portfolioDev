@@ -21,6 +21,12 @@
                        {{ Session::get('success') }} 
                     </div>
                     @endif
+                    @if(Session::get('fail'))
+                    <div class="alert alert-danger">
+                       {{ Session::get('fail') }} 
+                    </div>
+        
+                    @endif
                     <div class="form-group">
                         <label for="">Nombre:</label>
                         <span class="text-danger">@error('name')
