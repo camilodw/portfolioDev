@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/123b103282.js" crossorigin="anonymous"></script>
     
 </head>
