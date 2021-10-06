@@ -4,10 +4,10 @@
         <div class="row justify-content-center">
             <label>Contacto</label>
             <div class="col-12 text-center">
-                <a href="" style="text-decoration: none;">
+                <a href="https://www.linkedin.com/in/camilo-oyarzo/" style="text-decoration: none;">
                     <img src="{{ asset('img/linkedin.svg') }}" alt="">
                 </a>
-                <a href="" style="text-decoration: none;">
+                <a href="https://twitter.com/oyarzodw" style="text-decoration: none;">
                     <img src="{{ asset('img/twitter-6.svg') }}" alt="" width="40px">
                 </a>
             </div>
