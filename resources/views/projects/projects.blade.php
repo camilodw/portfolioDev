@@ -2,9 +2,9 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-1">
+            <div class="col-2">
                 <a href="https://github.com/camilodw"  target="_blank">
-                    <img src="{{ asset('img/github.svg') }}" alt="github">
+                    <img src="{{ secure_asset('img/github.svg') }}" alt="github">
                 </a>
            
             </div>
