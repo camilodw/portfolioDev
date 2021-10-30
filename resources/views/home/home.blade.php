@@ -15,14 +15,14 @@
                 <div class="col-12 col-lg-5 bg-white border rounded text-center mt-3">
                     <span class="text text-primary h5">{{ $project->name }}</span>
                     <img src="{{ $project->link_image }}" alt="{{ $project->name }}" class="d-block w-100">
-                    <a href="{{ $project->link_project }}" class="btn btn-link text-primary" target="_blank">Ver Proyecto</a>
+                    <a href="{{ $project->link_project }}" class="btn text-primary" target="_blank">Ver Proyecto</a>
                 </div>
             @empty
                 <span class="text text-danger">Proyectos no disponibles</span>
             @endforelse        
         </div>
             <div class="text-right">
-                <a href="/projects" class="btn btn-link text-primary">Ver más projectos</a>
+                <a href="/projects" class="btn text-primary">Ver más projectos</a>
             </div>
         <div class="row justify-content-center mt-3">
             <div class="col-12 text-center">
@@ -37,7 +37,7 @@
             @endforelse
         </div>
             <div class="text-right">
-                <a href="/courses" class="btn btn-link text-primary">Ver más certificados</a>
+                <a href="/courses" class="btn text-primary">Ver más certificados</a>
             </div>
     </div>
 @endsection
