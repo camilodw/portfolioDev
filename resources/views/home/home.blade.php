@@ -13,10 +13,9 @@
             </div>
             @forelse ($projects as $project)
                 <div class="col-12 col-lg-5 bg-white border rounded text-center mt-3">
-                    <a href="{{ $project->link_project }}" class="link-unstyled" target="_blank">
                     <span class="text text-primary h5">{{ $project->name }}</span>
                     <img src="{{ $project->link_image }}" alt="{{ $project->name }}" class="d-block w-100">
-                  </a>
+                    <a href="{{ $project->link_project }}" class="btn btn-outline-info text-white" target="_blank">Ver Proyecto</a>
                 </div>
             @empty
                 <span class="text text-danger">Proyectos no disponibles</span>
