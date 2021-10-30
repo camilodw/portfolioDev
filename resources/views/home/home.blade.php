@@ -22,7 +22,7 @@
             @endforelse        
         </div>
             <div class="text-right">
-                <a href="/projects" class="">Ver más projectos</a>
+                <a href="/projects" class="btn text-primary">Ver más projectos</a>
             </div>
         <div class="row justify-content-center mt-3">
             <div class="col-12 text-center">
