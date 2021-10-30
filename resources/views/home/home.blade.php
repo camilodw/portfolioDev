@@ -37,7 +37,7 @@
             @endforelse
         </div>
             <div class="text-right">
-                <a href="/courses" class="">Ver más certificados</a>
+                <a href="/courses" class="btn text-primary">Ver más certificados</a>
             </div>
     </div>
 @endsection
