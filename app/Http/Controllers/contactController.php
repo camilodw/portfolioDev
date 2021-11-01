@@ -37,8 +37,13 @@ class contactController extends Controller
         $user->message=$request->message;
        $save=$user->save();
         if ($save) {
-           Mail::to($user->email)->send(new contact());
+            try {
+                Mail::to($user->email)->send(new contact());
             return back()->with('success','Mensaje enviado, lo responderé lo antes posible');
+            } catch (\Throwable $th) {
+                return back()->with('fail','Error al enviar formulario intente más tarde');
+            }
+           
         }else {
             return back()->with('fail','Error al enviar formulario intente más tarde');
         }
