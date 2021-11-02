@@ -25,11 +25,12 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-        <img src="{{ asset('img/Avatar.svg') }}" alt="Avatar" width="100px">
+        <img src="{{ secure_asset('img/Avatar.svg') }}" alt="Avatar" width="100px">
         <a class="navbar-brand" href="/">Camilo Oyarzo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
