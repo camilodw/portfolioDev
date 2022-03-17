@@ -23,4 +23,13 @@ class Courses extends Model
      */
     protected $fillable = ['link', 'name'];
 
+    public static function getAllCourses(){
+        $courses = Courses::paginate(2);
+        return $courses;
+    }
+    
+    public static function getTwoCourses(){
+        $courses = Courses::limit(2)->get();
+        return $courses; 
+    }
 }

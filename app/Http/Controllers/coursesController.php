@@ -8,19 +8,8 @@ class coursesController extends Controller
 {
 public function index()
 {
-   $courses=$this->getAllCourses();
-   return view('knowledge.courses',['courses'=>$courses]);
+   $courses = Courses::getAllCourses();
+   return view('knowledge.courses', ['courses' => $courses]);
 }
-
-private function getAllCourses(){
-    $courses=Courses::paginate(2);
-    return $courses;
-}
-public function getTwoCourses(){
-    $courses=Courses::limit(2)->get();
-    return $courses; 
-}
-
-
 
 }
