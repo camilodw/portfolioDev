@@ -4,7 +4,7 @@ use App\Mail\contact;
 use App\Models\Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-
+use App\Http\Requests\Contact\StoreRequest;
 class contactController extends Controller
 {
     /**
@@ -22,30 +22,30 @@ class contactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        $request->validate([
-            'name'=>'required|string',
-            'email'=>'required|email',
-            'lastName'=>'required|string',
-            'message'=>'required|string|max:150'
-        ]);
-        $user=new Form();
-        $user->email=$request->email;
-        $user->name=$request->name;
-        $user->lastName=$request->lastName;
-        $user->message=$request->message;
-       $save=$user->save();
-        if ($save) {
+        $user = form::updateOrCreate(
+            [
+            'email' => $request->email
+            ],
+            [
+             'name' => $request->name,
+             'lastName' => $request->lastName,
+             'message' => $request->message
+            ]
+        );
+
+        if ($user) {
             try {
-                Mail::to($user->email)->send(new contact());
-            return back()->with('success','Mensaje enviado, lo responderé lo antes posible');
+                Mail::to( $user->email )->send( new contact() );
+                return back()->with('success', 'Mensaje enviado, lo responderé lo antes posible');
+
             } catch (\Throwable $th) {
-                return back()->with('fail','Error al enviar formulario intente más tarde');
+                return back()->with('fail', 'Error al enviar formulario intente más tarde');
             }
            
         }else {
-            return back()->with('fail','Error al enviar formulario intente más tarde');
+            return back()->with('fail', 'Error al enviar formulario intente más tarde');
         }
         
     }
