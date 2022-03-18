@@ -41,14 +41,12 @@ class contactController extends Controller
                 return back()->with('success', 'Mensaje enviado, lo responderé lo antes posible');
 
             } catch (\Throwable $th) {
+                \Log::debug("email error send:".$th);
                 return back()->with('fail', 'Error al enviar formulario intente más tarde');
             }
            
         }else {
             return back()->with('fail', 'Error al enviar formulario intente más tarde');
-        }
-        
+        }   
     }
-
-   
 }

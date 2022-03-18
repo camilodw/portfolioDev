@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12 text-center mt-4">
                 <h3 class="h3">Hola, soy Camilo Oyarzo</h3>
-                <p>Soy analista programador, actualmente vivo en la región de valparaíso de chile</p>
+                <p>Soy Desarrollador web, me dedico a desarrollar páginas web responsive para que tu página se adapte a cualquier dispositivo</p>
             </div>
         </div>
         <div class="row justify-content-center mt-3">
